@@ -6,23 +6,17 @@ using UnityEngine.SceneManagement;
 using UnityEditor;
 #endif
 using UnityEngine.UI;
+using TMPro;
 
 public class MenuHandler : MonoBehaviour
 {
     private string input;
-    // Start is called before the first frame update
-    void Start()
+    public TextMeshProUGUI highScoreText;
+
+    private void Start()
     {
-        
+        highScoreText.text = "Best Score: " + DataManager.Instance.recordHolder + ": " + DataManager.Instance.highScore;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
 
     public void GetNameEntry(string username)
     {

@@ -79,6 +79,8 @@ public class MainManager : MonoBehaviour
             DataManager.Instance.highScore = m_Points;
             DataManager.Instance.recordHolder = DataManager.Instance.currentUser;
 
+            DataManager.Instance.SaveHighScore();
+
         }
         GameOverText.SetActive(true);
     }
